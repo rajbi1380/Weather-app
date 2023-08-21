@@ -1,0 +1,148 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --bg_main: #0a1f44;
+  --text_light: #fff;
+  --text_med: #53627c;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff8c00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+body {
+  background-color: var(--bg_main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.top-banner {
+  background-color: #fff;
+  width: 500px;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.container .heading {
+  font-size: 45px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #0a1f44;
+}
+form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+}
+
+:where(input, button) {
+  border: 0;
+  outline: 0;
+}
+
+input {
+  font-size: 15px;
+  padding: 10px 5px;
+  width: 70%;
+  transition: all 2s;
+}
+
+input[type="text"]:focus {
+  border-bottom: 1px solid #0a1f44;
+  font-size: 20px;
+  color: #0a1f44;
+}
+
+button {
+  margin-top: 20px;
+  width: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: var(--bg_main);
+  color: var(--red);
+}
+@media screen and (max-width: 1500px) {
+  .top-banner {
+    width: 350px;
+  }
+  .ajax-section {
+    margin-top: 20px;
+  }
+}
+img {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.ajax-section {
+  margin-top: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.cities .city {
+  width: 280px;
+  height: 350px;
+  text-align: center;
+
+  padding: 20px 10px;
+
+  border-radius: 5px;
+}
+
+.ajax-section .city-name {
+  padding-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--orange);
+}
+.ajax-section .city-temp {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+figure {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+.caption {
+  font-size: 25px;
+  color: var(--bg_main);
+  font-weight: 800;
+}
+
+@media screen and (max-width: 1500px) {
+  .cities .city {
+    width: 250px;
+  }
+}
+.top-banner form .msg {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--darkred);
+}
